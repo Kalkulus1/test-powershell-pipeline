@@ -1,0 +1,13 @@
+name: Test PowerShell on Ubuntu
+on: push
+
+jobs:
+  powershell-test:
+    name: Powershell test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Hello World
+        shell: pwsh
+        run: ./HelloWorld.ps1
